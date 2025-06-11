@@ -1,5 +1,3 @@
-import org.gradle.kotlin.dsl.implementation
-
 plugins {
 	alias(libs.plugins.android.application)
 	alias(libs.plugins.kotlin.android)
@@ -14,8 +12,8 @@ android {
 		applicationId = "com.candy.v50"
 		minSdk = 21
 		targetSdk = 35
-		versionCode = 1
-		versionName = "1.0"
+		versionCode = 20250610
+		versionName = "1.1.0"
 
 		testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 	}
@@ -40,6 +38,8 @@ android {
 
 dependencies {
 	implementation("com.squareup.retrofit2:retrofit:3.0.0")
+
+	implementation("io.coil-kt.coil3:coil-compose:3.2.0")
 
 	// Retrofit Scalar Converter (用于处理 String 响应)
 	implementation ("com.squareup.retrofit2:converter-scalars:2.9.0")

@@ -140,7 +140,8 @@ fun Main_Page(data: Data_Manager = viewModel())
 						{
 							Toast.makeText(context, "没有可复制的文案", Toast.LENGTH_SHORT).show()
 						}
-					}
+					},
+					enabled = !data.request,
 				)
 				{
 					Text(
@@ -156,6 +157,7 @@ fun Main_Page(data: Data_Manager = viewModel())
 						val chooser = Intent.createChooser(share, "分享到...") // 创建分享选择器
 						context.startActivity(chooser) // 启动分享选择器
 					},
+					enabled = !data.request,
 				)
 				{
 					Text(
